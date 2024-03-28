@@ -1,0 +1,5 @@
+- id: size-check
+  name: size-check
+  description: "Check the size of files being committed"
+  entry: size-check
+  language: python

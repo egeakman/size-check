@@ -1,0 +1,48 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = [
+  "hatchling",
+]
+
+[project]
+name = "size-check"
+description = "Check the size of files being committed"
+readme = "README.md"
+keywords = [
+  "pre-commit",
+  "hook",
+  "git",
+  "size",
+  "check",
+]
+license = {text = "AGPLv3"}
+authors = [{name = "Ege Akman", email = "me@egeakman.dev"}]
+requires-python = ">=3.6"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Operating System :: MacOS :: MacOS X",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3 :: Only",
+]
+dynamic = [
+  "version",
+]
+[project.urls]
+Homepage = "https://github.com/egeakman/size-check"
+Issues = "https://github.com/egeakman/size-check/issues"
+Releases = "https://github.com/egeakman/size-check/releases"
+[project.scripts]
+size-check = "size_check.main:main"
+
+[tool.hatch.build]
+packages = ["size_check"]
+isolated = true
+
+[tool.hatch.version]
+path = "size_check/__init__.py"
+
+[tool.isort]
+profile = "black"
+known_first_party = "size_check"

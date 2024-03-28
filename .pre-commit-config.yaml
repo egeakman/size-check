@@ -35,3 +35,8 @@ repos:
     rev: v0.16
     hooks:
       - id: validate-pyproject
+
+  - repo: https://github.com/egeakman/size-check
+    rev: master
+    hooks:
+      - id: size-check
